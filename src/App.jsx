@@ -1,28 +1,21 @@
-import { useState } from 'react'
+import React from 'react';
+import HeroHome from './components/HeroHome';
+import AuthCard from './components/AuthCard';
+import ReportsList from './components/ReportsList';
+import AIChatWidget from './components/AIChatWidget';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="min-h-dvh bg-gradient-to-b from-slate-50 to-white text-slate-900 dark:from-slate-950 dark:to-slate-900 dark:text-slate-100">
+      <main className="mx-auto max-w-7xl space-y-10 pb-20 pt-6 sm:pt-10">
+        <HeroHome />
+        <AuthCard />
+        <ReportsList />
+      </main>
+      <AIChatWidget />
+      <footer className="mx-auto max-w-7xl px-4 pb-10 pt-6 text-xs text-slate-500 sm:px-6">
+        Built for a refined SeeClickFix experience · Minimal, modern, accessible
+      </footer>
     </div>
-  )
+  );
 }
-
-export default App
